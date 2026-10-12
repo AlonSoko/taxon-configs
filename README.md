@@ -2,7 +2,7 @@
 
 Matching configurations for **Taxon**, an IDA Pro plugin that finds open-source libraries in a binary and names their functions.
 
-A configuration describes one release of one library as one compiler built it: every function's strings, constants, calls, size, stack frame, instruction shape and control-flow shape, and the order of the functions in each source file. Taxon identifies a library and its version in a binary, picks the configurations that fit how the binary was built, and matches the library's functions against them.
+A configuration describes one release of one library as one compiler built it: every function's strings, constants, calls, size, stack frame, instruction shape and control-flow shape, the order of the functions in each source file, and the tables of function pointers the library keeps (such as the name-to-function tables of Lua's libraries, or a cipher's list of functions). Taxon identifies a library and its version in a binary, picks the configurations that fit how the binary was built, and matches the library's functions against them.
 
 The configurations are the assets of this repository's [releases](https://github.com/AlonSoko/taxon-configs/releases), one pack per platform; the repository itself holds this description and the manifest of the latest release.
 
@@ -13,7 +13,7 @@ The configurations are the assets of this repository's [releases](https://github
 | `taxon-configs-linux-x86.tar.gz` | GCC and clang, x86-64 and x86 (Linux, and MinGW on Windows) | 320 | 39 MB |
 | `taxon-configs-linux-arm64.tar.gz` | GCC and clang, ARM64 | 160 | 19 MB |
 | `taxon-configs-macos.tar.gz` | Apple clang, Mach-O, ARM64 and x86-64 | 160 | 18 MB |
-| `taxon-configs-windows-msvc.tar.gz` | MSVC: Visual Studio 2026 and 2019 | 170 | 21 MB |
+| `taxon-configs-windows-msvc.tar.gz` | MSVC: Visual Studio 2026 and 2019 | 170 | 22 MB |
 
 Each library release has a configuration for every optimisation level of every compiler and architecture:
 

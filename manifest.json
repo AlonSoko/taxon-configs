@@ -1,30 +1,30 @@
 {
  "schema": 1,
- "set": "2026.10.12",
+ "set": "2026.10.13",
  "generated_by": "taxon 3.0.0",
  "packs": {
   "linux-arm64": {
    "file": "taxon-configs-linux-arm64.tar.gz",
-   "size": 19247304,
-   "sha256": "b22edcb398b3ccd41d9bf937f1ad69a8f02b56391b400b1a6e1840c8b136ac44",
+   "size": 19356876,
+   "sha256": "1bd3a95337f9affc016ab7601ce4ce34a1b1c96bc61514a9b902e4e039b0c359",
    "configurations": 160
   },
   "linux-x86": {
    "file": "taxon-configs-linux-x86.tar.gz",
-   "size": 38810195,
-   "sha256": "0c66aca05b4ec310c5c69d47e8f657d56e2684e7cb07d0026c8693e653576c0c",
+   "size": 39028319,
+   "sha256": "deeb0351823b36ac94243b7a41d7100c32421486e7d18284f3f2baef5cf4267f",
    "configurations": 320
   },
   "macos": {
    "file": "taxon-configs-macos.tar.gz",
-   "size": 17889790,
-   "sha256": "4a9d58efefaee28fad761baf4373e8919458ebec464e71fb88f62233be619f9c",
+   "size": 18049175,
+   "sha256": "15170bffd5e39e673d0080db35ffb144d189ece48730013f6940879eb3394553",
    "configurations": 160
   },
   "windows-msvc": {
    "file": "taxon-configs-windows-msvc.tar.gz",
-   "size": 21449336,
-   "sha256": "59b291b7665101edf4a5e45afcd51ce7ee6cad09edb5929f1fbdd28d6060be97",
+   "size": 21551854,
+   "sha256": "da45fd94fea3a8e9c736c5da16ab4b5f8fae408caf875ef732ce3cd0eb23cdce",
    "configurations": 170
   }
  },
