@@ -10,20 +10,24 @@ The configurations are the assets of this repository's [releases](https://github
 
 | Pack | For binaries built with | Configurations | Size |
 |---|---|---|---|
-| `taxon-configs-linux-x86.tar.gz` | GCC and clang, x86-64 and x86 (Linux, and MinGW on Windows) | 320 | 39 MB |
-| `taxon-configs-linux-arm64.tar.gz` | GCC and clang, ARM64 | 160 | 19 MB |
-| `taxon-configs-macos.tar.gz` | Apple clang, Mach-O, ARM64 and x86-64 | 160 | 18 MB |
-| `taxon-configs-windows-msvc.tar.gz` | MSVC: Visual Studio 2026 and 2019 | 170 | 22 MB |
+| `taxon-configs-linux-x86.tar.gz` | GCC and clang, x86-64 and x86 (Linux, and MinGW on Windows) | 380 | 78 MB |
+| `taxon-configs-linux-arm64.tar.gz` | GCC and clang, ARM64 | 190 | 39 MB |
+| `taxon-configs-macos.tar.gz` | Apple clang, Mach-O, ARM64 and x86-64 | 190 | 37 MB |
+| `taxon-configs-windows-msvc.tar.gz` | MSVC: Visual Studio 2026 back to Visual C++ 6.0 | 825 | 170 MB |
 
-Each library release has a configuration for every optimisation level of every compiler and architecture:
+Each library release has a configuration for every optimisation level of every compiler and architecture that can build it:
 
 | Compiler | Architectures | Optimisation levels |
 |---|---|---|
 | GCC 14 | x86-64, x86, ARM64 | `-O0`, `-O1`, `-O2`, `-O3`, `-Os` |
 | clang 19 | x86-64, x86, ARM64 | `-O0`, `-O1`, `-O2`, `-O3`, `-Os` |
 | Apple clang 21 | ARM64, x86-64 | `-O0`, `-O1`, `-O2`, `-O3`, `-Os` |
-| MSVC 14.51 (VS 2026), MSVC 14.29 (VS 2019) | x86-64 | `/Od`, `/O2`, `/O1` |
-| MSVC 14.51 (VS 2026), MSVC 14.29 (VS 2019) | x86 | `/Od`, `/O2` |
+| MSVC 14.51 (VS 2026), 14.44 (VS 2022), 14.29 (VS 2019), 14.16 (VS 2017), 14.0 (VS 2015), 12.0 (VS 2013), 11.0 (VS 2012), 10.0 (VS 2010), 9.0 (VS 2008) | x86-64 | `/Od`, `/O2`, `/O1` |
+| the same, and 8.0 (VS 2005), 6.0 (Visual C++ 6.0) | x86 | `/Od`, `/O2` |
+
+The compilers before VS 2015 cannot build every library: the libraries are written in C99 and later, and VS 2012 and older lack its headers (`stdint.h` before VS 2010, `inttypes.h` and `stdbool.h` before VS 2013) and parts of its syntax. VS 2015 and newer build all 18 library releases; VS 2013 15 of them, VS 2012 and 2010 13, VS 2008 and 2005 10, Visual C++ 6.0 7. `manifest.json` lists what each pack has.
+
+A library can come in more than one *flavour*, built with another set of its options: SQLite as `sqlite3.c` is built by default, and as `+distro`, with the options Linux distributions enable (FTS3/4/5, R-Tree, Geopoly, sessions, column metadata, math functions, ...), whose code those builds carry (e.g. `sqlite3_3.46.1@gcc-O2-x64+distro.json.gz`).
 
 `manifest.json` lists every library with its licence, its configured releases and the versions each one covers (a configuration stands in for the other releases of the same major version), the variants in each pack, and each pack's size and SHA-256. The packs are reproducible: the same configurations give byte-identical archives.
 
@@ -44,7 +48,7 @@ Each library release has a configuration for every optimisation level of every c
 | MinHook | 1.3.4 | BSD-2-Clause |
 | miniz | 3.1.2 | MIT |
 | Mongoose | 7.23 | GPL-2.0-only OR Cesanta commercial |
-| SQLite | 3.54.0 | Public domain (blessing) |
+| SQLite | 3.46.1, 3.54.0 (each plain and `+distro`) | Public domain (blessing) |
 | zlib | 1.3.1 | Zlib |
 | Zstandard | 1.5.7 | BSD-3-Clause OR GPL-2.0-only |
 
