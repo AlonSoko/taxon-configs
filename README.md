@@ -13,7 +13,7 @@ The configurations are the assets of this repository's [releases](https://github
 | `taxon-configs-linux-x86.tar.gz` | GCC and clang, x86-64 and x86 (Linux, and MinGW on Windows) | 380 | 78 MB |
 | `taxon-configs-linux-arm64.tar.gz` | GCC and clang, ARM64 | 190 | 39 MB |
 | `taxon-configs-macos.tar.gz` | Apple clang, Mach-O, ARM64 and x86-64 | 190 | 37 MB |
-| `taxon-configs-windows-msvc.tar.gz` | MSVC: Visual Studio 2026 back to Visual C++ 6.0 | 825 | 170 MB |
+| `taxon-configs-windows-msvc.tar.gz` | MSVC: Visual Studio 2026 back to Visual C++ 6.0 | 898 | 184 MB |
 
 Each library release has a configuration for every optimisation level of every compiler and architecture that can build it:
 
@@ -25,7 +25,7 @@ Each library release has a configuration for every optimisation level of every c
 | MSVC 14.51 (VS 2026), 14.44 (VS 2022), 14.29 (VS 2019), 14.16 (VS 2017), 14.0 (VS 2015), 12.0 (VS 2013), 11.0 (VS 2012), 10.0 (VS 2010), 9.0 (VS 2008) | x86-64 | `/Od`, `/O2`, `/O1` |
 | the same, and 8.0 (VS 2005), 6.0 (Visual C++ 6.0) | x86 | `/Od`, `/O2` |
 
-The compilers before VS 2015 cannot build every library: the libraries are written in C99 and later, and VS 2012 and older lack its headers (`stdint.h` before VS 2010, `inttypes.h` and `stdbool.h` before VS 2013) and parts of its syntax. VS 2015 and newer build all 18 library releases; VS 2013 15 of them, VS 2012 and 2010 13, VS 2008 and 2005 10, Visual C++ 6.0 7. `manifest.json` lists what each pack has.
+The compilers before VS 2015 cannot build every library: the libraries are written in C99 and later, and VS 2012 and older lack its headers (`stdint.h` before VS 2010, `inttypes.h` and `stdbool.h` before VS 2013) and parts of its syntax. The libraries are built with small stand-ins for the missing headers, as old projects were, so VS 2015 and newer build all 18 library releases; VS 2013 17 of them, VS 2012 16, VS 2010 and 2008 15, VS 2005 14, Visual C++ 6.0 8. `manifest.json` lists what each pack has.
 
 A library can come in more than one *flavour*, built with another set of its options: SQLite as `sqlite3.c` is built by default, and as `+distro`, with the options Linux distributions enable (FTS3/4/5, R-Tree, Geopoly, sessions, column metadata, math functions, ...), whose code those builds carry (e.g. `sqlite3_3.46.1@gcc-O2-x64+distro.json.gz`).
 
