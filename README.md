@@ -10,20 +10,26 @@ The configurations are the assets of this repository's [releases](https://github
 
 | Pack | For binaries built with | Configurations | Size |
 |---|---|---|---|
-| `taxon-configs-linux-x86.tar.gz` | GCC and clang, x86-64 and x86 (Linux, and MinGW on Windows) | 380 | 78 MB |
-| `taxon-configs-linux-arm64.tar.gz` | GCC and clang, ARM64 | 190 | 39 MB |
+| `taxon-configs-linux-x86.tar.gz` | GCC and clang, x86-64 and x86 (Linux, and MinGW on Windows) | 5,960 | 1.2 GB |
+| `taxon-configs-linux-arm64.tar.gz` | GCC and clang, ARM64 | 2,044 | 425 MB |
 | `taxon-configs-macos.tar.gz` | Apple clang, Mach-O, ARM64 and x86-64 | 190 | 37 MB |
-| `taxon-configs-windows-msvc.tar.gz` | MSVC: Visual Studio 2026 back to Visual C++ 6.0 | 898 | 184 MB |
+| `taxon-configs-windows-msvc.tar.gz` | MSVC: Visual Studio 2026 back to Visual C++ 6.0; clang-cl | 1,432 | 292 MB |
 
 Each library release has a configuration for every optimisation level of every compiler and architecture that can build it:
 
 | Compiler | Architectures | Optimisation levels |
 |---|---|---|
-| GCC 14 | x86-64, x86, ARM64 | `-O0`, `-O1`, `-O2`, `-O3`, `-Os` |
-| clang 19 | x86-64, x86, ARM64 | `-O0`, `-O1`, `-O2`, `-O3`, `-Os` |
+| GCC 15, 14, 13, 12, 11, 9, 7, 5, 4.8 | x86-64, x86, ARM64 | `-O0`, `-O1`, `-O2`, `-O3`, `-Os` |
+| GCC 4.4, 4.1, 3.4, 3.3 | x86-64, x86 | `-O0`, `-O1`, `-O2`, `-O3`, `-Os` |
+| clang 19 to 10, 6.0, 3.8 | x86-64, x86, ARM64 | `-O0`, `-O1`, `-O2`, `-O3`, `-Os` |
 | Apple clang 21 | ARM64, x86-64 | `-O0`, `-O1`, `-O2`, `-O3`, `-Os` |
 | MSVC 14.51 (VS 2026), 14.44 (VS 2022), 14.29 (VS 2019), 14.16 (VS 2017), 14.0 (VS 2015), 12.0 (VS 2013), 11.0 (VS 2012), 10.0 (VS 2010), 9.0 (VS 2008) | x86-64 | `/Od`, `/O2`, `/O1` |
-| the same, and 8.0 (VS 2005), 6.0 (Visual C++ 6.0) | x86 | `/Od`, `/O2` |
+| the same, and 8.0 (VS 2005), 7.1 (Visual Studio .NET 2003), 7.0 (Visual Studio .NET 2002), 6.0 (Visual C++ 6.0) | x86 | `/Od`, `/O2` |
+| clang-cl 19 (with lld-link) | x86-64, x86 | `/Od`, `/O2` (x86-64 also `/O1`) |
+
+**Link-time optimised builds** (GCC and clang `-flto`, MSVC `/GL`) have configurations of their own, marked `-lto` after the architecture: GCC 4.8 to 15 and clang 6.0 to 19 at `-O2` (GCC 14 and clang 19 also at `-Os` and `-O3`, and ARM64 at `-O2`), and Visual Studio .NET 2002 to Visual Studio 2026 at `/O2` (2019 and 2026 also at `/O1`). Each is the library linked alone with LTO; GCC's also come as `-lto+whole`, linked with only the library's entry points kept, as GCC treats a library inside a program. Taxon tries them only when a library's functions are not laid out file by file.
+
+Taxon picks the compiler release from the binary's identification string (`.comment`) when it keeps one, and the nearest releases' configurations stand in for a release that has none.
 
 The compilers before VS 2015 cannot build every library: the libraries are written in C99 and later, and VS 2012 and older lack its headers (`stdint.h` before VS 2010, `inttypes.h` and `stdbool.h` before VS 2013) and parts of its syntax. The libraries are built with small stand-ins for the missing headers, as old projects were, so VS 2015 and newer build all 18 library releases; VS 2013 17 of them, VS 2012 16, VS 2010 and 2008 15, VS 2005 14, Visual C++ 6.0 8. `manifest.json` lists what each pack has.
 
