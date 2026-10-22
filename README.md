@@ -4,16 +4,41 @@ Matching configurations for **Taxon**, an IDA Pro plugin that finds open-source 
 
 A configuration describes one release of one library as one compiler built it: every function's strings, constants, calls, size, stack frame, instruction shape and control-flow shape, the order of the functions in each source file, and the tables of function pointers the library keeps (such as the name-to-function tables of Lua's libraries, or a cipher's list of functions). Taxon identifies a library and its version in a binary, picks the configurations that fit how the binary was built, and matches the library's functions against them.
 
-The configurations are the assets of this repository's [releases](https://github.com/AlonSoko/taxon-configs/releases), one pack per platform; the repository itself holds this description and the manifest of the latest release.
+The configurations are the assets of this repository's [releases](https://github.com/AlonSoko/taxon-configs/releases), one pack per library and platform; the repository itself holds this description and the manifest of the latest release. Taxon fetches the packs of each library it finds in a binary by itself, for the binary's platform, so most users never download them by hand.
 
 ## Packs
 
-| Pack | For binaries built with | Configurations | Size |
+Release 2026.10.22 has 17,332 configurations in 62 packs, 688 MB in all. A pack is named `taxon-configs-<library>-<platform>.tar.zst`, e.g. `taxon-configs-zlib-linux-x86.tar.zst`, for one of four platforms:
+
+| Platform | For binaries built with | Configurations | Size |
 |---|---|---|---|
-| `taxon-configs-linux-x86.tar.gz` | GCC and clang, x86-64 and x86 (Linux, and MinGW on Windows) | 5,960 | 1.2 GB |
-| `taxon-configs-linux-arm64.tar.gz` | GCC and clang, ARM64 | 2,044 | 425 MB |
-| `taxon-configs-macos.tar.gz` | Apple clang, Mach-O, ARM64 and x86-64 | 190 | 37 MB |
-| `taxon-configs-windows-msvc.tar.gz` | MSVC: Visual Studio 2026 back to Visual C++ 6.0; clang-cl | 1,432 | 292 MB |
+| `linux-x86` | GCC and clang, x86-64 and x86 (Linux, and MinGW on Windows), and MinGW-w64's GCC | 10,926 | 434 MB |
+| `linux-arm64` | GCC and clang, ARM64 | 4,149 | 162 MB |
+| `macos` | Apple clang, Mach-O, ARM64 and x86-64 | 406 | 17 MB |
+| `windows` | MSVC: Visual Studio 2026 back to Visual C++ 6.0; clang-cl | 1,851 | 76 MB |
+
+Each library's packs, size (configurations):
+
+| Library | `linux-x86` | `linux-arm64` | `macos` | `windows` |
+|---|---|---|---|---|
+| BearSSL | 12.6 MB (592) | 4.8 MB (225) | 0.6 MB (22) | 1.9 MB (77) |
+| Bzip2 | 1.5 MB (598) | 0.7 MB (225) | 0.09 MB (22) | 0.3 MB (100) |
+| cJSON | 1.2 MB (598) | 0.4 MB (225) | 0.07 MB (22) | 0.3 MB (105) |
+| LibTomCrypt | 14.6 MB (598) | 5.9 MB (225) | 0.7 MB (22) | 2.9 MB (105) |
+| LibTomMath | 3.8 MB (598) | 1.4 MB (225) | 0.2 MB (22) | 0.7 MB (97) |
+| Lua | 17.2 MB (598) | 6.2 MB (225) | 0.8 MB (22) | 3.6 MB (105) |
+| lwIP | 7.7 MB (598) | 3.4 MB (225) | 0.5 MB (22) | 1.7 MB (105) |
+| LZ4 | 4.6 MB (598) | 1.7 MB (225) | 0.3 MB (22) | 1.0 MB (95) |
+| LZMA SDK (`LZMA_SDK`) | 2.1 MB (564) | 0.8 MB (225) | 0.1 MB (22) | 0.5 MB (105) |
+| mbedTLS | 67.0 MB (1,127) | 27.6 MB (445) | 3.1 MB (44) | 9.3 MB (118) |
+| MinHook | 0.09 MB (108) | — | — | 0.1 MB (95) |
+| miniz | 3.1 MB (598) | 1.2 MB (225) | 0.2 MB (22) | 0.6 MB (95) |
+| Mongoose | 6.4 MB (598) | 2.6 MB (225) | 0.3 MB (22) | 1.2 MB (75) |
+| SQLite (`sqlite3`) | 270.4 MB (1,957) | 97.7 MB (779) | 9.5 MB (76) | 46.6 MB (376) |
+| zlib | 2.7 MB (598) | 1.0 MB (225) | 0.1 MB (22) | 0.5 MB (103) |
+| Zstandard | 19.0 MB (598) | 6.2 MB (225) | 0.8 MB (22) | 4.1 MB (95) |
+
+A pack is a tar of the library's configurations for the platform in one zstd stream (level 22, 128 MB window), which stores what they share once: one library's configurations across compilers, releases and levels are mostly the same functions, and the whole set is about 5 times smaller than as separately gzipped files.
 
 Each library release has a configuration for every optimisation level of every compiler and architecture that can build it:
 
@@ -26,8 +51,11 @@ Each library release has a configuration for every optimisation level of every c
 | MSVC 14.51 (VS 2026), 14.44 (VS 2022), 14.29 (VS 2019), 14.16 (VS 2017), 14.0 (VS 2015), 12.0 (VS 2013), 11.0 (VS 2012), 10.0 (VS 2010), 9.0 (VS 2008) | x86-64 | `/Od`, `/O2`, `/O1` |
 | the same, and 8.0 (VS 2005), 7.1 (Visual Studio .NET 2003), 7.0 (Visual Studio .NET 2002), 6.0 (Visual C++ 6.0) | x86 | `/Od`, `/O2` |
 | clang-cl 19 (with lld-link) | x86-64, x86 | `/Od`, `/O2` (x86-64 also `/O1`) |
+| MinGW-w64 GCC 14, 13, 10, 9, 7, 5 | x86-64, x86 | `-O2`, `-O3`, `-Os` |
 
-**Link-time optimised builds** (GCC and clang `-flto`, MSVC `/GL`) have configurations of their own, marked `-lto` after the architecture: GCC 4.8 to 15 and clang 6.0 to 19 at `-O2` (GCC 14 and clang 19 also at `-Os` and `-O3`, and ARM64 at `-O2`), and Visual Studio .NET 2002 to Visual Studio 2026 at `/O2` (2019 and 2026 also at `/O1`). Each is the library linked alone with LTO; GCC's also come as `-lto+whole`, linked with only the library's entry points kept, as GCC treats a library inside a program. Taxon tries them only when a library's functions are not laid out file by file.
+**Link-time optimised builds** (GCC and clang `-flto`, MSVC `/GL`) have configurations of their own, marked `-lto` after the architecture: GCC 4.8 to 15, clang 6.0 to 19 and Apple clang at `-O2`, `-Os` and `-O3` (x86-64, x86 and ARM64), MinGW-w64 GCC 5 to 14 at the same levels, and Visual Studio .NET 2002 to Visual Studio 2026 and clang-cl at `/O2` and `/O1`. Each is the library linked alone with LTO; GCC's (MinGW-w64's too) also come as `-lto+whole`, linked with only the library's entry points kept, as GCC treats a library inside a program, and clang's as `-lto+thin`, with ThinLTO. Taxon tries them only when a library's functions are not laid out file by file.
+
+The **MinGW-w64** configurations are built by each release's own MinGW-w64 cross compiler; Taxon tries them for PE files only, alongside the GCC ones.
 
 Taxon picks the compiler release from the binary's identification string (`.comment`) when it keeps one, and the nearest releases' configurations stand in for a release that has none.
 
@@ -35,7 +63,7 @@ The compilers before VS 2015 cannot build every library: the libraries are writt
 
 A library can come in more than one *flavour*, built with another set of its options: SQLite as `sqlite3.c` is built by default, and as `+distro`, with the options Linux distributions enable (FTS3/4/5, R-Tree, Geopoly, sessions, column metadata, math functions, ...), whose code those builds carry (e.g. `sqlite3_3.46.1@gcc-O2-x64+distro.json.gz`).
 
-`manifest.json` lists every library with its licence, its configured releases and the versions each one covers (a configuration stands in for the other releases of the same major version), the variants in each pack, and each pack's size and SHA-256. The packs are reproducible: the same configurations give byte-identical archives.
+`manifest.json` (format 2) lists every library with its licence, its configured releases and the versions each one covers (a configuration stands in for the other releases of the same major version), the variants of each release per platform, and each pack's size, number of configurations and SHA-256. The packs are reproducible: the same configurations give byte-identical archives.
 
 ## Libraries
 
@@ -60,25 +88,27 @@ A library can come in more than one *flavour*, built with another set of its opt
 
 ## Using them
 
-With Taxon installed:
+Taxon fetches what it needs: the first time it finds a library in a binary, it downloads that library's pack for the binary's platform from the latest release, checks it against the manifest's SHA-256 and unpacks it into `~/.taxon/configs` (or `$TAXON_CONFIGS`), where the matcher looks for configurations (`TAXON_FETCH=0` turns this off). To fetch ahead, for offline use:
 
 ```sh
-python -m taxon.configs list                        # the latest release: packs, libraries, licences
-python -m taxon.configs fetch                       # every pack
-python -m taxon.configs fetch --platform linux-x86  # or only the ones you need
+python -m taxon.configs list                                  # the latest release: packs, libraries, licences
+python -m taxon.configs fetch                                 # every pack
+python -m taxon.configs fetch --platform linux-x86            # one platform
+python -m taxon.configs fetch --library zlib --library SQLite # some libraries
+python -m taxon.configs update                                # the installed packs, from the newest release
 ```
 
-`fetch` checks each pack against the manifest's SHA-256 and unpacks it into `~/.taxon/configs` (or `$TAXON_CONFIGS`), where the matcher looks for configurations.
+The packs need a Taxon that reads manifest format 2; an older one stops with a message to update Taxon. Unpacking needs Python 3.14, or the `zstandard` package before it (a dependency of Taxon there).
 
 By hand:
 
 ```sh
 mkdir -p ~/.taxon/configs
-curl -L https://github.com/AlonSoko/taxon-configs/releases/latest/download/taxon-configs-linux-x86.tar.gz \
-  | tar -xz -C ~/.taxon/configs
+curl -L https://github.com/AlonSoko/taxon-configs/releases/latest/download/taxon-configs-zlib-linux-x86.tar.zst \
+  | zstd -d --long=27 | tar -x -C ~/.taxon/configs
 ```
 
-Each pack unpacks to `<library>/<library>_<version>[_windows]@<compiler>-<optimisation>-<architecture>.json.gz`, e.g. `zlib/zlib_1.3.1@gcc-O2-x64.json.gz`.
+Each pack unpacks to `<library>/<library>_<version>[_windows]@<compiler>-<optimisation>-<architecture>.json`, e.g. `zlib/zlib_1.3.1@gcc-O2-x64.json`.
 
 ## Licence
 
