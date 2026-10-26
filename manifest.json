@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "set": "2026.10.22",
+ "set": "2026.10.26",
  "generated_by": "taxon 3.0.0",
  "packs": {
   "BearSSL/linux-arm64": {
@@ -8,8 +8,8 @@
    "folder": "BearSSL",
    "platform": "linux-arm64",
    "file": "taxon-configs-BearSSL-linux-arm64.tar.zst",
-   "size": 4794785,
-   "sha256": "f0b676bc96b99bb1eaac78ecdfae427d20654f4bb898892b7bf5cda46993a83e",
+   "size": 5390030,
+   "sha256": "5285aa1152cf6bbd06638665f00d17cd58a4bcef6e5a96f83b55e2232f642d42",
    "configurations": 225
   },
   "BearSSL/linux-x86": {
@@ -17,8 +17,8 @@
    "folder": "BearSSL",
    "platform": "linux-x86",
    "file": "taxon-configs-BearSSL-linux-x86.tar.zst",
-   "size": 12571476,
-   "sha256": "07a7894232fa872528904d8a7400e881fddfa5785e6f259d7594b73995d604dc",
+   "size": 14246346,
+   "sha256": "e4f3021de78904f0bb57eea3dc47cff6165e3995cf2e03f1456633ba7cc6aa46",
    "configurations": 592
   },
   "BearSSL/macos": {
@@ -26,8 +26,8 @@
    "folder": "BearSSL",
    "platform": "macos",
    "file": "taxon-configs-BearSSL-macos.tar.zst",
-   "size": 620787,
-   "sha256": "eba1d64848bfa4e453395257bdfb83cb894f6dc8e8ac402d3d1d8fdad2d51ef6",
+   "size": 704607,
+   "sha256": "9943ca5d7f82d13693706ecc07547bcd7708a48ab343f69d32df6261fb78ff4a",
    "configurations": 22
   },
   "BearSSL/windows": {
@@ -35,8 +35,8 @@
    "folder": "BearSSL",
    "platform": "windows",
    "file": "taxon-configs-BearSSL-windows.tar.zst",
-   "size": 1942355,
-   "sha256": "b16f970f87f04abfad7b11c1937fe46471a11276a9b61218205e473c1ee34824",
+   "size": 2239011,
+   "sha256": "5d6968b357345126722d28458975705f78976375303b9c720a9c29700404a518",
    "configurations": 77
   },
   "Bzip2/linux-arm64": {
@@ -44,8 +44,8 @@
    "folder": "Bzip2",
    "platform": "linux-arm64",
    "file": "taxon-configs-Bzip2-linux-arm64.tar.zst",
-   "size": 679654,
-   "sha256": "31017666601f687186c8360797c8dcbd80d5d3ec5d8c943b507f21b548aece9c",
+   "size": 734281,
+   "sha256": "eaa55624d77b2a2da9a56d52cf56ec3013214ab6889f48f8e11c5ffa2936b93a",
    "configurations": 225
   },
   "Bzip2/linux-x86": {
@@ -53,8 +53,8 @@
    "folder": "Bzip2",
    "platform": "linux-x86",
    "file": "taxon-configs-Bzip2-linux-x86.tar.zst",
-   "size": 1533354,
-   "sha256": "5fa074bc41891d3f5bd634cb35d44422bb385b3f1f0ae561d4ed321b0c3ececc",
+   "size": 1682762,
+   "sha256": "0ddbd162ae93922563f7d1d951240b7ce3ecfe4148b20cd4a437dafaf582ec33",
    "configurations": 598
   },
   "Bzip2/macos": {
@@ -62,8 +62,8 @@
    "folder": "Bzip2",
    "platform": "macos",
    "file": "taxon-configs-Bzip2-macos.tar.zst",
-   "size": 93088,
-   "sha256": "849eddfb8da5e4453c496b12cc5c984bb4b1e56df40e3bc9ef5ae05146b946af",
+   "size": 103404,
+   "sha256": "67b2acedb14fdd78bf404410328c366472533987c449cd8efaad2d3d6e6e47e4",
    "configurations": 22
   },
   "Bzip2/windows": {
@@ -71,8 +71,8 @@
    "folder": "Bzip2",
    "platform": "windows",
    "file": "taxon-configs-Bzip2-windows.tar.zst",
-   "size": 345757,
-   "sha256": "a7d67d89c94dba2688d692b803733a60e2371ceabab9d6111e8794f5593b1a36",
+   "size": 391104,
+   "sha256": "1292dced859306b2597fdb896670d8920e1e5772b6baf3795a905996423295ba",
    "configurations": 100
   },
   "LZ4/linux-arm64": {
@@ -80,8 +80,8 @@
    "folder": "LZ4",
    "platform": "linux-arm64",
    "file": "taxon-configs-LZ4-linux-arm64.tar.zst",
-   "size": 1749699,
-   "sha256": "86f241930ca127c7a7faa0c9aab86c2310b15cb6ef3a9ee019f93cc4451afa0f",
+   "size": 1890823,
+   "sha256": "9f5e293370048b2a3b671caa2476cbd8785308d5a3d3e37cbad498a3d89238c6",
    "configurations": 225
   },
   "LZ4/linux-x86": {
@@ -89,8 +89,8 @@
    "folder": "LZ4",
    "platform": "linux-x86",
    "file": "taxon-configs-LZ4-linux-x86.tar.zst",
-   "size": 4593457,
-   "sha256": "23484aef1efa73afbc5379fcd4c333128a15cbcddc5467d4d46c3cfd121e1c5a",
+   "size": 4989827,
+   "sha256": "c475f48fce7d9fa120257fb1d1174ba166f8f0f2cd1a116485a50b6d1cceb59d",
    "configurations": 598
   },
   "LZ4/macos": {
@@ -98,8 +98,8 @@
    "folder": "LZ4",
    "platform": "macos",
    "file": "taxon-configs-LZ4-macos.tar.zst",
-   "size": 253679,
-   "sha256": "e641e4c064b903308c16afc6008502c70afffd47b2d7c68674e7e6096b30d8ad",
+   "size": 277181,
+   "sha256": "4e90f6355449da9652ca4825e8f4b52836f7d9fdee076ccebd86463c21d92ab7",
    "configurations": 22
   },
   "LZ4/windows": {
@@ -107,8 +107,8 @@
    "folder": "LZ4",
    "platform": "windows",
    "file": "taxon-configs-LZ4-windows.tar.zst",
-   "size": 1010110,
-   "sha256": "e5f3a1ef0e4e23a26d3254626ec60c59c43d4dab6955e081f031636563428640",
+   "size": 1112984,
+   "sha256": "c5ea17724a12bf167c007169df7cf73d577a4df58aeb7f9c4e6aa82856e2cb1b",
    "configurations": 95
   },
   "LZMA_SDK/linux-arm64": {
@@ -116,8 +116,8 @@
    "folder": "LZMA_SDK",
    "platform": "linux-arm64",
    "file": "taxon-configs-LZMA_SDK-linux-arm64.tar.zst",
-   "size": 817929,
-   "sha256": "4009887546091bc370736021d4d2b3974d31995cfe8bab5840628d3c353a3835",
+   "size": 906754,
+   "sha256": "d669fe0cbfe86868153c70418b0d966ceff8e609a2751d6e82dba05da5a603e0",
    "configurations": 225
   },
   "LZMA_SDK/linux-x86": {
@@ -125,8 +125,8 @@
    "folder": "LZMA_SDK",
    "platform": "linux-x86",
    "file": "taxon-configs-LZMA_SDK-linux-x86.tar.zst",
-   "size": 2060566,
-   "sha256": "ba44d6c2dc0530d126fd7f81ce79137e0f0584e31f966d6cd2d0a4eb72eb09d9",
+   "size": 2307344,
+   "sha256": "cde1fc6d42500a0fdb30be3d20d57525945ee90b76c13b0610c8f9046cf44c37",
    "configurations": 564
   },
   "LZMA_SDK/macos": {
@@ -134,8 +134,8 @@
    "folder": "LZMA_SDK",
    "platform": "macos",
    "file": "taxon-configs-LZMA_SDK-macos.tar.zst",
-   "size": 117894,
-   "sha256": "9e0a6fac4e1c237b7c76006256de3d6488cbc0609fc4783172ba09d4fc1a4dc0",
+   "size": 133762,
+   "sha256": "b2b9bd94b78fe035d3ccf1b5f832339dbc243abd1fb7d350f4c9ae3d2f06053a",
    "configurations": 22
   },
   "LZMA_SDK/windows": {
@@ -143,8 +143,8 @@
    "folder": "LZMA_SDK",
    "platform": "windows",
    "file": "taxon-configs-LZMA_SDK-windows.tar.zst",
-   "size": 497398,
-   "sha256": "d39bb7e497d464c3ce6a8ed903ab80dee7db62b44541e74a5091bda6316f2d0e",
+   "size": 573657,
+   "sha256": "922b51b02a2feca1147964b4dea2df752bfb95fa9980d6a2412473755b797ded",
    "configurations": 105
   },
   "LibTomCrypt/linux-arm64": {
@@ -152,8 +152,8 @@
    "folder": "LibTomCrypt",
    "platform": "linux-arm64",
    "file": "taxon-configs-LibTomCrypt-linux-arm64.tar.zst",
-   "size": 5893355,
-   "sha256": "281aff9387d909b955095b76be87281cf2ae86acb696e61be8380bb13c76b34a",
+   "size": 6549824,
+   "sha256": "ce4fab00ca57e8944baa2745fce9500fd3c8ffb230892bf0373c12b0d3375a85",
    "configurations": 225
   },
   "LibTomCrypt/linux-x86": {
@@ -161,8 +161,8 @@
    "folder": "LibTomCrypt",
    "platform": "linux-x86",
    "file": "taxon-configs-LibTomCrypt-linux-x86.tar.zst",
-   "size": 14634093,
-   "sha256": "9db66e3611a3925cca1921c5731560c814a158962da3ac648a4517b002822138",
+   "size": 16551658,
+   "sha256": "f51c3bcc9da16695bb2e9806efad37cea6a0d76c4d8df22b6ad181399c2cc67a",
    "configurations": 598
   },
   "LibTomCrypt/macos": {
@@ -170,8 +170,8 @@
    "folder": "LibTomCrypt",
    "platform": "macos",
    "file": "taxon-configs-LibTomCrypt-macos.tar.zst",
-   "size": 660729,
-   "sha256": "5f1df17ba00ded36a17d73a09098f4097012100782dbf6abf4f1ddcc0256c2ce",
+   "size": 758731,
+   "sha256": "10298fd16412948574ce85b9ad54aa1856dd94a3f4782b83af84fee76de7b382",
    "configurations": 22
   },
   "LibTomCrypt/windows": {
@@ -179,8 +179,8 @@
    "folder": "LibTomCrypt",
    "platform": "windows",
    "file": "taxon-configs-LibTomCrypt-windows.tar.zst",
-   "size": 2906378,
-   "sha256": "56dea20d9529ee8b0022ffdb0b6a97a5a8e6df17eda32671ef8953a5cd17cc63",
+   "size": 3314921,
+   "sha256": "5e86025094c7731f7bb3fc8ea392d7fec8611ad20ec1c10fb5304dcaf2c2b59d",
    "configurations": 105
   },
   "LibTomMath/linux-arm64": {
@@ -188,8 +188,8 @@
    "folder": "LibTomMath",
    "platform": "linux-arm64",
    "file": "taxon-configs-LibTomMath-linux-arm64.tar.zst",
-   "size": 1387222,
-   "sha256": "658a7bbc565dc60dfe89acd0fc7e192242922c782471f55c67c2287702b5eff6",
+   "size": 1563695,
+   "sha256": "60bfbd7707bed1347eb28d9306eb0b19a4bbe825ae9a03f3440dc9ee81720d13",
    "configurations": 225
   },
   "LibTomMath/linux-x86": {
@@ -197,8 +197,8 @@
    "folder": "LibTomMath",
    "platform": "linux-x86",
    "file": "taxon-configs-LibTomMath-linux-x86.tar.zst",
-   "size": 3836764,
-   "sha256": "1e3276a216ec78b3588234b75bccf9cd12a15af9ac09103742b51359bee85fb8",
+   "size": 4294432,
+   "sha256": "61f358ddb01e1ef759874e1bf7b2ec7e29538dc857354ea2690e8947c309cb06",
    "configurations": 598
   },
   "LibTomMath/macos": {
@@ -206,8 +206,8 @@
    "folder": "LibTomMath",
    "platform": "macos",
    "file": "taxon-configs-LibTomMath-macos.tar.zst",
-   "size": 204358,
-   "sha256": "0c17e7564cb598fa8c1ed970fd227ff6439a0b0f5f8a7c8c20a7b90968d49469",
+   "size": 229180,
+   "sha256": "0efb761a94970c75accab7511a42167606e2dbc5a87b0db3010aa0643c6ecd19",
    "configurations": 22
   },
   "LibTomMath/windows": {
@@ -215,8 +215,8 @@
    "folder": "LibTomMath",
    "platform": "windows",
    "file": "taxon-configs-LibTomMath-windows.tar.zst",
-   "size": 749192,
-   "sha256": "ca2238e8b34af2a8e49079bf535e4d42ca1ea6fb449e42067d411a7e99d0bb09",
+   "size": 848157,
+   "sha256": "757984579e54c795bda5b84e5f136f2e9de20733ae5ebd915bdd98b10ff2d535",
    "configurations": 97
   },
   "Lua/linux-arm64": {
@@ -224,8 +224,8 @@
    "folder": "Lua",
    "platform": "linux-arm64",
    "file": "taxon-configs-Lua-linux-arm64.tar.zst",
-   "size": 6246311,
-   "sha256": "fb74964cb433f52cd275c1b2a29b3d1f7442b39a8fb6c9a5d22f474949d407c0",
+   "size": 7005198,
+   "sha256": "6f9b495e204bb0ecd8a1c51ef273bfa767a110d15e68800aced209ffea5d5436",
    "configurations": 225
   },
   "Lua/linux-x86": {
@@ -233,8 +233,8 @@
    "folder": "Lua",
    "platform": "linux-x86",
    "file": "taxon-configs-Lua-linux-x86.tar.zst",
-   "size": 17197941,
-   "sha256": "ddf0c5ad8254f0e1daaf0f2faf429b7acff919bb69541f606b3393d1d8aa7ed2",
+   "size": 19529638,
+   "sha256": "403ef1da6b2ddba395b4da405f792f544f445817e97585f8d16df5287f479e19",
    "configurations": 598
   },
   "Lua/macos": {
@@ -242,8 +242,8 @@
    "folder": "Lua",
    "platform": "macos",
    "file": "taxon-configs-Lua-macos.tar.zst",
-   "size": 840436,
-   "sha256": "49579d3603f512f49c798054a6e2624377693558b37d443854e9e63450ecefca",
+   "size": 955765,
+   "sha256": "9a2ebcea6c3e3270626c8c4283d8c7c988093bfb0531f9d9000d1d6e2833e344",
    "configurations": 22
   },
   "Lua/windows": {
@@ -251,8 +251,8 @@
    "folder": "Lua",
    "platform": "windows",
    "file": "taxon-configs-Lua-windows.tar.zst",
-   "size": 3599121,
-   "sha256": "d61241710b9571d2f98b566b211df70a88cd1d1645aa1069d5ebb2ba0b54fddb",
+   "size": 4173329,
+   "sha256": "c620ab3e81c6f91b399be376824f5c3cb9c43e2d4c60ae51d2945191bb80211d",
    "configurations": 105
   },
   "MinHook/linux-x86": {
@@ -260,8 +260,8 @@
    "folder": "MinHook",
    "platform": "linux-x86",
    "file": "taxon-configs-MinHook-linux-x86.tar.zst",
-   "size": 87226,
-   "sha256": "7618782dd05bc9cae19289cabe9ad4472ee28d66431083c7be315cd6d88629d0",
+   "size": 98445,
+   "sha256": "77e66aecc272819a9ddcf7c5d74786600e0a264cfe41fc3b7725c88c507ae193",
    "configurations": 108
   },
   "MinHook/windows": {
@@ -269,8 +269,8 @@
    "folder": "MinHook",
    "platform": "windows",
    "file": "taxon-configs-MinHook-windows.tar.zst",
-   "size": 110672,
-   "sha256": "61aab4416b4027c67b31478fcbc0418d7c890e10f3331eb17048a3a7677d6509",
+   "size": 130455,
+   "sha256": "87378316f55686cbb9c885ae75a94474cb969ee07c898874b41dcd8e56434b83",
    "configurations": 95
   },
   "Mongoose/linux-arm64": {
@@ -278,8 +278,8 @@
    "folder": "Mongoose",
    "platform": "linux-arm64",
    "file": "taxon-configs-Mongoose-linux-arm64.tar.zst",
-   "size": 2596487,
-   "sha256": "b880212933a8350dba0e6876accf2354ede91439483a1037bc00929e35e51037",
+   "size": 2902771,
+   "sha256": "64d3420dc9e77ed87693864170b1a703d3c13bc309b09458d230a605d97e5325",
    "configurations": 225
   },
   "Mongoose/linux-x86": {
@@ -287,8 +287,8 @@
    "folder": "Mongoose",
    "platform": "linux-x86",
    "file": "taxon-configs-Mongoose-linux-x86.tar.zst",
-   "size": 6400371,
-   "sha256": "7305b6f597125aeed2c7a3b81292aa342cb97d7ef68d83e35f550ed5db8725e5",
+   "size": 7244926,
+   "sha256": "e3cd82ddb9dd137168222a5a00bd15c14e35f82b607ce430098504414cd1756f",
    "configurations": 598
   },
   "Mongoose/macos": {
@@ -296,8 +296,8 @@
    "folder": "Mongoose",
    "platform": "macos",
    "file": "taxon-configs-Mongoose-macos.tar.zst",
-   "size": 347166,
-   "sha256": "2c29472d5eeaf92c3090bcd02ef446ad052d6704340da2c938e987482b80854a",
+   "size": 387351,
+   "sha256": "9925de19292050987007cb4baa7f0acbaf97bcc704cc29208960381af510e1f0",
    "configurations": 22
   },
   "Mongoose/windows": {
@@ -305,8 +305,8 @@
    "folder": "Mongoose",
    "platform": "windows",
    "file": "taxon-configs-Mongoose-windows.tar.zst",
-   "size": 1171643,
-   "sha256": "22bedf3855780bbe264153e8e9e8e1ce6d696f47bf9cb5a503d309f9eeff182b",
+   "size": 1357726,
+   "sha256": "a6b19396b8caed7da3f00a2562ba63525257672ddb72f89f251f414a9998cd15",
    "configurations": 75
   },
   "Zstandard/linux-arm64": {
@@ -314,8 +314,8 @@
    "folder": "Zstandard",
    "platform": "linux-arm64",
    "file": "taxon-configs-Zstandard-linux-arm64.tar.zst",
-   "size": 6215550,
-   "sha256": "b9ba4d14f7a62eb5f56e167db172d6a45b425c6a575cd7512bed8bcd7ed2c7ca",
+   "size": 6900820,
+   "sha256": "d0c6c7e3e6dc5745bcd8e22b45b5a3833e171ffb8a7fc3bd50d09708856073d6",
    "configurations": 225
   },
   "Zstandard/linux-x86": {
@@ -323,8 +323,8 @@
    "folder": "Zstandard",
    "platform": "linux-x86",
    "file": "taxon-configs-Zstandard-linux-x86.tar.zst",
-   "size": 19040148,
-   "sha256": "5d79a9b9642d1d8302cc59144e3c698f6b9e3f6762d04300e2ff526d485f7aef",
+   "size": 21111926,
+   "sha256": "59f39192135c7027188d40bc0593fc54bb9b9f13f4d22ae6528d3d6d25651092",
    "configurations": 598
   },
   "Zstandard/macos": {
@@ -332,8 +332,8 @@
    "folder": "Zstandard",
    "platform": "macos",
    "file": "taxon-configs-Zstandard-macos.tar.zst",
-   "size": 755169,
-   "sha256": "516eaa83dea191f17e769db0c6e13289a73e8846bf3cf29d282ac58be8da4b38",
+   "size": 847410,
+   "sha256": "c8da246052b76463a6e6817a88ba0d345149f55a42592ec7348329d2ef03b876",
    "configurations": 22
   },
   "Zstandard/windows": {
@@ -341,8 +341,8 @@
    "folder": "Zstandard",
    "platform": "windows",
    "file": "taxon-configs-Zstandard-windows.tar.zst",
-   "size": 4069013,
-   "sha256": "9019c4861433deda098e3f70c0e2569085ca9228d32baef39de662539128539d",
+   "size": 4604447,
+   "sha256": "e3a9a135caa71d755830a75be5d5e960cdfa3ebffa7bc141e37a9a5e0a579dba",
    "configurations": 95
   },
   "cJSON/linux-arm64": {
@@ -350,8 +350,8 @@
    "folder": "cJSON",
    "platform": "linux-arm64",
    "file": "taxon-configs-cJSON-linux-arm64.tar.zst",
-   "size": 433523,
-   "sha256": "b429903ff974f4456157365d94dc806f8f41bfd9e2eeb79971b2ea829270dac3",
+   "size": 484992,
+   "sha256": "09ebd0dddc1796ecf943f805f5d73dfc3a473ef63eb61dff52d3d75b55a76583",
    "configurations": 225
   },
   "cJSON/linux-x86": {
@@ -359,8 +359,8 @@
    "folder": "cJSON",
    "platform": "linux-x86",
    "file": "taxon-configs-cJSON-linux-x86.tar.zst",
-   "size": 1178301,
-   "sha256": "5e9ac0d451674f363d977438cb8dec37da8fecba47241be979ecb6989b643292",
+   "size": 1335213,
+   "sha256": "17abfe4d162d5698edef7377422a1976ff11d1bbfff55e3082d1e30630d04520",
    "configurations": 598
   },
   "cJSON/macos": {
@@ -368,8 +368,8 @@
    "folder": "cJSON",
    "platform": "macos",
    "file": "taxon-configs-cJSON-macos.tar.zst",
-   "size": 66197,
-   "sha256": "d6f74093c2aac25d68c5e1c9c0fce0c352a81bdf3a5b0509509da7cc9fc57048",
+   "size": 74647,
+   "sha256": "2b60d7b690e865d277bdb7475328e5e11e7a444e1ab9d43aeef92292950d9482",
    "configurations": 22
   },
   "cJSON/windows": {
@@ -377,8 +377,8 @@
    "folder": "cJSON",
    "platform": "windows",
    "file": "taxon-configs-cJSON-windows.tar.zst",
-   "size": 286397,
-   "sha256": "76e09280ab072dd5a0bf8cd9877fc0c7c358a14ce7d674d6c8a3227f8562b32e",
+   "size": 331625,
+   "sha256": "ffb41da64db8094e97856bffd9baa4a9dc304e9a66f310b388b8b2a28f9f91fb",
    "configurations": 105
   },
   "lwIP/linux-arm64": {
@@ -386,8 +386,8 @@
    "folder": "lwIP",
    "platform": "linux-arm64",
    "file": "taxon-configs-lwIP-linux-arm64.tar.zst",
-   "size": 3355950,
-   "sha256": "7b28ce020c15b4181723ef024893a4790a1c497c5c413885a33c4873c56e5a58",
+   "size": 3793940,
+   "sha256": "25f2717b70ae07a5c1e3189f1b5c4677c5e3bf036258702d066796a063321b30",
    "configurations": 225
   },
   "lwIP/linux-x86": {
@@ -395,8 +395,8 @@
    "folder": "lwIP",
    "platform": "linux-x86",
    "file": "taxon-configs-lwIP-linux-x86.tar.zst",
-   "size": 7722627,
-   "sha256": "2adc27ac455b392bd0f1fdcae0f51c5074faeb0d8030d7fc0a0a3db66296fca1",
+   "size": 8785233,
+   "sha256": "56e96cb7a15b51c8caec666b09e339438aa996d7c15b868bf812b8c9ee6e2506",
    "configurations": 598
   },
   "lwIP/macos": {
@@ -404,8 +404,8 @@
    "folder": "lwIP",
    "platform": "macos",
    "file": "taxon-configs-lwIP-macos.tar.zst",
-   "size": 478878,
-   "sha256": "cf1f7e33430e20cf6ecbc3b91713cc969ccda6e4d555ecba2139886d2425a4a6",
+   "size": 544915,
+   "sha256": "69620e7dc6356f49c8ffe307563af7934f4d0eb9a0d7bc0d0d84007d2504a6ba",
    "configurations": 22
   },
   "lwIP/windows": {
@@ -413,8 +413,8 @@
    "folder": "lwIP",
    "platform": "windows",
    "file": "taxon-configs-lwIP-windows.tar.zst",
-   "size": 1696696,
-   "sha256": "5d562ec5a89d5f47a8240ded0d913d2a1fc62976b5aa06c1ce3a625360f1d56a",
+   "size": 1960660,
+   "sha256": "e550e886f6c59d6ae1cd5a298e8ed09acd0bbf8fca2a19f930622cc50d939250",
    "configurations": 105
   },
   "mbedTLS/linux-arm64": {
@@ -422,8 +422,8 @@
    "folder": "mbedTLS",
    "platform": "linux-arm64",
    "file": "taxon-configs-mbedTLS-linux-arm64.tar.zst",
-   "size": 27604487,
-   "sha256": "bc0312740c3cd92e715b4d098e4b1af4c2eb80131a7936024535236e647a9052",
+   "size": 30839298,
+   "sha256": "4d461615e0074d813dfc829002e7dff1410cc990852dadf3b3e537be4b085d70",
    "configurations": 445
   },
   "mbedTLS/linux-x86": {
@@ -431,8 +431,8 @@
    "folder": "mbedTLS",
    "platform": "linux-x86",
    "file": "taxon-configs-mbedTLS-linux-x86.tar.zst",
-   "size": 67017874,
-   "sha256": "c9f9d342e64d42bc5a44962fbb2af201641f411f66ced6e3c5003a400a9dfe70",
+   "size": 74939511,
+   "sha256": "5cb58390cf0e945328cb875122fa2718dfec3d0bc11eda03fd3160f33efd65ab",
    "configurations": 1127
   },
   "mbedTLS/macos": {
@@ -440,8 +440,8 @@
    "folder": "mbedTLS",
    "platform": "macos",
    "file": "taxon-configs-mbedTLS-macos.tar.zst",
-   "size": 3098563,
-   "sha256": "8cd633ae6654855a5c5964485082c35296b6cf4359791619848c5b3b50804076",
+   "size": 3512794,
+   "sha256": "954e8d506c53b93803a5e3095622b6b7b5b0f6f054bddcf57c12eb635202d683",
    "configurations": 44
   },
   "mbedTLS/windows": {
@@ -449,8 +449,8 @@
    "folder": "mbedTLS",
    "platform": "windows",
    "file": "taxon-configs-mbedTLS-windows.tar.zst",
-   "size": 9327661,
-   "sha256": "608642c7f250339ef3bb114a7ec5115f3bd24cedd0055aa1ece54da3facbedf5",
+   "size": 10641872,
+   "sha256": "219ae512b12b8225fe0ec1925fd7db30549f43b003b8eb1906ae97a3ca7be512",
    "configurations": 118
   },
   "miniz/linux-arm64": {
@@ -458,8 +458,8 @@
    "folder": "miniz",
    "platform": "linux-arm64",
    "file": "taxon-configs-miniz-linux-arm64.tar.zst",
-   "size": 1192246,
-   "sha256": "d56024d7e73caa407737327d233a148b62e7e00516ff825beb6ecad77b8939c2",
+   "size": 1321773,
+   "sha256": "2a5ee1fbc64492ab58a86ac1d2a32123138c923a1dc2680a82acbea06efbd838",
    "configurations": 225
   },
   "miniz/linux-x86": {
@@ -467,8 +467,8 @@
    "folder": "miniz",
    "platform": "linux-x86",
    "file": "taxon-configs-miniz-linux-x86.tar.zst",
-   "size": 3086789,
-   "sha256": "bd6e6678e63313d8a1d2e34d87504744bfc47657210e636c8ae8fb69e34e49d0",
+   "size": 3429532,
+   "sha256": "b0d6b1278bcb971a8c742f6af9e493abd7f56c442cbb9d27e49ea8411a841684",
    "configurations": 598
   },
   "miniz/macos": {
@@ -476,8 +476,8 @@
    "folder": "miniz",
    "platform": "macos",
    "file": "taxon-configs-miniz-macos.tar.zst",
-   "size": 166404,
-   "sha256": "b1e5ef1beec27c6a1607aa645d91ef639ef6831def1d885378462c6496c87223",
+   "size": 186001,
+   "sha256": "0306d2652dfd0dc3e4d9047ce6d160a3d734158482bdf86b32f0eb4c68f02871",
    "configurations": 22
   },
   "miniz/windows": {
@@ -485,8 +485,8 @@
    "folder": "miniz",
    "platform": "windows",
    "file": "taxon-configs-miniz-windows.tar.zst",
-   "size": 634445,
-   "sha256": "0a817a3930f6f1701b22e4d5ba2ef97c876dd3fc873b162f0462c5d5416278c6",
+   "size": 727531,
+   "sha256": "3b8f9a3b55d111a2aad4e4dc6bc6692dd34041e070f8050c11cd756b81d7d79b",
    "configurations": 95
   },
   "sqlite3/linux-arm64": {
@@ -494,8 +494,8 @@
    "folder": "sqlite3",
    "platform": "linux-arm64",
    "file": "taxon-configs-sqlite3-linux-arm64.tar.zst",
-   "size": 97700248,
-   "sha256": "dae12d80d0b1040cb0b2f6ab2323a78ca7a55592d1bca241aa4033595e368fac",
+   "size": 108222741,
+   "sha256": "47d96f91b14a49d8c8bea2ec97e417bdae8da3a9f2651399daeffac17f619248",
    "configurations": 779
   },
   "sqlite3/linux-x86": {
@@ -503,8 +503,8 @@
    "folder": "sqlite3",
    "platform": "linux-x86",
    "file": "taxon-configs-sqlite3-linux-x86.tar.zst",
-   "size": 270352898,
-   "sha256": "09dfba7c3777cb6922af06969f46f64ba510e5ca13c6818d692bb5ea71ae46c7",
+   "size": 300678063,
+   "sha256": "86133815210e760282f0f3911a2edfce8a73f6bce0d250e29aa89c187815953f",
    "configurations": 1957
   },
   "sqlite3/macos": {
@@ -512,8 +512,8 @@
    "folder": "sqlite3",
    "platform": "macos",
    "file": "taxon-configs-sqlite3-macos.tar.zst",
-   "size": 9461843,
-   "sha256": "ecc7f3471cae553916af4fd3d985009a6499083669e0a07f0f58dfbb43689eb6",
+   "size": 10471017,
+   "sha256": "9252b83feed6184e38f7d82a897bedcbd54bb72e413f949104e009486d84af89",
    "configurations": 76
   },
   "sqlite3/windows": {
@@ -521,8 +521,8 @@
    "folder": "sqlite3",
    "platform": "windows",
    "file": "taxon-configs-sqlite3-windows.tar.zst",
-   "size": 46647092,
-   "sha256": "9da0b0df99e03919d273b806ce01756d0fca9f7199e3c08435376c677af1a6e4",
+   "size": 53799623,
+   "sha256": "925a75a531587f88b334cf8bfe1c6c4b10b3a0c90ece36a71712c58838d5a725",
    "configurations": 376
   },
   "zlib/linux-arm64": {
@@ -530,8 +530,8 @@
    "folder": "zlib",
    "platform": "linux-arm64",
    "file": "taxon-configs-zlib-linux-arm64.tar.zst",
-   "size": 1025502,
-   "sha256": "fd8fbe66576fcd3bb9548bb78b887eda3fbecc05a44d2c0171108bd3ff14894f",
+   "size": 1152720,
+   "sha256": "98c84c39db3754b4c5bdba63a846f2796e6c3bbec6abfcbc6c479324c64393b8",
    "configurations": 225
   },
   "zlib/linux-x86": {
@@ -539,8 +539,8 @@
    "folder": "zlib",
    "platform": "linux-x86",
    "file": "taxon-configs-zlib-linux-x86.tar.zst",
-   "size": 2689292,
-   "sha256": "cf1de99564eb0ea9ebe0c0770b58f8cb9a6a379fa9d06d99e480ae4df867e019",
+   "size": 3040194,
+   "sha256": "53195f349f0ff9baf65e0a45c388c1b7abbc1bca1aaad0e52711bc53dfd173c5",
    "configurations": 598
   },
   "zlib/macos": {
@@ -548,8 +548,8 @@
    "folder": "zlib",
    "platform": "macos",
    "file": "taxon-configs-zlib-macos.tar.zst",
-   "size": 137043,
-   "sha256": "f2fa7b6eff6cd03f6579078cb92c1da6b2d4e3b1a6854a880f4a9f951497ebb5",
+   "size": 156272,
+   "sha256": "b4c9e6a5e3a239fa3d7931d0488936c64ef37bfa519dda333fea273ef4bb2111",
    "configurations": 22
   },
   "zlib/windows": {
@@ -557,8 +557,8 @@
    "folder": "zlib",
    "platform": "windows",
    "file": "taxon-configs-zlib-windows.tar.zst",
-   "size": 533445,
-   "sha256": "ce9b477d7a76adeccfd9869584b5adf946f891807b87860b18e840eceedbeee7",
+   "size": 619537,
+   "sha256": "55927570b482d05ef46d3629a3740528b2bd39ea4dfd3cf99070b0271a3d4315",
    "configurations": 103
   }
  },

@@ -2,41 +2,41 @@
 
 Matching configurations for **Taxon**, an IDA Pro plugin that finds open-source libraries in a binary and names their functions.
 
-A configuration describes one release of one library as one compiler built it: every function's strings, constants, calls, size, stack frame, instruction shape and control-flow shape, the order of the functions in each source file, and the tables of function pointers the library keeps (such as the name-to-function tables of Lua's libraries, or a cipher's list of functions). Taxon identifies a library and its version in a binary, picks the configurations that fit how the binary was built, and matches the library's functions against them.
+A configuration describes one release of one library as one compiler built it: every function's strings, constants, calls, size, stack frame, instruction shape and control-flow shape, the structure fields and global data it reaches, and its operands' roles, the order of the functions in each source file, and the tables of function pointers the library keeps (such as the name-to-function tables of Lua's libraries, or a cipher's list of functions). Taxon identifies a library and its version in a binary, picks the configurations that fit how the binary was built, and matches the library's functions against them.
 
 The configurations are the assets of this repository's [releases](https://github.com/AlonSoko/taxon-configs/releases), one pack per library and platform; the repository itself holds this description and the manifest of the latest release. Taxon fetches the packs of each library it finds in a binary by itself, for the binary's platform, so most users never download them by hand.
 
 ## Packs
 
-Release 2026.10.22 has 17,332 configurations in 62 packs, 688 MB in all. A pack is named `taxon-configs-<library>-<platform>.tar.zst`, e.g. `taxon-configs-zlib-linux-x86.tar.zst`, for one of four platforms:
+Release 2026.10.26 has 17,332 configurations in 62 packs, 770 MB in all. A pack is named `taxon-configs-<library>-<platform>.tar.zst`, e.g. `taxon-configs-zlib-linux-x86.tar.zst`, for one of four platforms:
 
 | Platform | For binaries built with | Configurations | Size |
 |---|---|---|---|
-| `linux-x86` | GCC and clang, x86-64 and x86 (Linux, and MinGW on Windows), and MinGW-w64's GCC | 10,926 | 434 MB |
-| `linux-arm64` | GCC and clang, ARM64 | 4,149 | 162 MB |
-| `macos` | Apple clang, Mach-O, ARM64 and x86-64 | 406 | 17 MB |
-| `windows` | MSVC: Visual Studio 2026 back to Visual C++ 6.0; clang-cl | 1,851 | 76 MB |
+| `linux-x86` | GCC and clang, x86-64 and x86 (Linux, and MinGW on Windows), and MinGW-w64's GCC | 10,926 | 484 MB |
+| `linux-arm64` | GCC and clang, ARM64 | 4,149 | 180 MB |
+| `macos` | Apple clang, Mach-O, ARM64 and x86-64 | 406 | 19 MB |
+| `windows` | MSVC: Visual Studio 2026 back to Visual C++ 6.0; clang-cl | 1,851 | 87 MB |
 
 Each library's packs, size (configurations):
 
 | Library | `linux-x86` | `linux-arm64` | `macos` | `windows` |
 |---|---|---|---|---|
-| BearSSL | 12.6 MB (592) | 4.8 MB (225) | 0.6 MB (22) | 1.9 MB (77) |
-| Bzip2 | 1.5 MB (598) | 0.7 MB (225) | 0.09 MB (22) | 0.3 MB (100) |
-| cJSON | 1.2 MB (598) | 0.4 MB (225) | 0.07 MB (22) | 0.3 MB (105) |
-| LibTomCrypt | 14.6 MB (598) | 5.9 MB (225) | 0.7 MB (22) | 2.9 MB (105) |
-| LibTomMath | 3.8 MB (598) | 1.4 MB (225) | 0.2 MB (22) | 0.7 MB (97) |
-| Lua | 17.2 MB (598) | 6.2 MB (225) | 0.8 MB (22) | 3.6 MB (105) |
-| lwIP | 7.7 MB (598) | 3.4 MB (225) | 0.5 MB (22) | 1.7 MB (105) |
-| LZ4 | 4.6 MB (598) | 1.7 MB (225) | 0.3 MB (22) | 1.0 MB (95) |
-| LZMA SDK (`LZMA_SDK`) | 2.1 MB (564) | 0.8 MB (225) | 0.1 MB (22) | 0.5 MB (105) |
-| mbedTLS | 67.0 MB (1,127) | 27.6 MB (445) | 3.1 MB (44) | 9.3 MB (118) |
-| MinHook | 0.09 MB (108) | — | — | 0.1 MB (95) |
-| miniz | 3.1 MB (598) | 1.2 MB (225) | 0.2 MB (22) | 0.6 MB (95) |
-| Mongoose | 6.4 MB (598) | 2.6 MB (225) | 0.3 MB (22) | 1.2 MB (75) |
-| SQLite (`sqlite3`) | 270.4 MB (1,957) | 97.7 MB (779) | 9.5 MB (76) | 46.6 MB (376) |
-| zlib | 2.7 MB (598) | 1.0 MB (225) | 0.1 MB (22) | 0.5 MB (103) |
-| Zstandard | 19.0 MB (598) | 6.2 MB (225) | 0.8 MB (22) | 4.1 MB (95) |
+| BearSSL | 14.2 MB (592) | 5.4 MB (225) | 0.7 MB (22) | 2.2 MB (77) |
+| Bzip2 | 1.7 MB (598) | 0.7 MB (225) | 0.1 MB (22) | 0.4 MB (100) |
+| cJSON | 1.3 MB (598) | 0.5 MB (225) | 0.07 MB (22) | 0.3 MB (105) |
+| LibTomCrypt | 16.6 MB (598) | 6.5 MB (225) | 0.8 MB (22) | 3.3 MB (105) |
+| LibTomMath | 4.3 MB (598) | 1.6 MB (225) | 0.2 MB (22) | 0.8 MB (97) |
+| Lua | 19.5 MB (598) | 7.0 MB (225) | 1.0 MB (22) | 4.2 MB (105) |
+| lwIP | 8.8 MB (598) | 3.8 MB (225) | 0.5 MB (22) | 2.0 MB (105) |
+| LZ4 | 5.0 MB (598) | 1.9 MB (225) | 0.3 MB (22) | 1.1 MB (95) |
+| LZMA SDK (`LZMA_SDK`) | 2.3 MB (564) | 0.9 MB (225) | 0.1 MB (22) | 0.6 MB (105) |
+| mbedTLS | 74.9 MB (1,127) | 30.8 MB (445) | 3.5 MB (44) | 10.6 MB (118) |
+| MinHook | 0.1 MB (108) | — | — | 0.1 MB (95) |
+| miniz | 3.4 MB (598) | 1.3 MB (225) | 0.2 MB (22) | 0.7 MB (95) |
+| Mongoose | 7.2 MB (598) | 2.9 MB (225) | 0.4 MB (22) | 1.4 MB (75) |
+| SQLite (`sqlite3`) | 300.7 MB (1,957) | 108.2 MB (779) | 10.5 MB (76) | 53.8 MB (376) |
+| zlib | 3.0 MB (598) | 1.2 MB (225) | 0.2 MB (22) | 0.6 MB (103) |
+| Zstandard | 21.1 MB (598) | 6.9 MB (225) | 0.8 MB (22) | 4.6 MB (95) |
 
 A pack is a tar of the library's configurations for the platform in one zstd stream (level 22, 128 MB window), which stores what they share once: one library's configurations across compilers, releases and levels are mostly the same functions, and the whole set is about 5 times smaller than as separately gzipped files.
 
